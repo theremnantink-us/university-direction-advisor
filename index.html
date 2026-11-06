@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Выбор направления обучения</title>
+  <style>
+    body { margin: 0; font: 17px/1.55 system-ui, sans-serif; background: #f4f7f4; color: #17241e; }
+    main { max-width: 650px; margin: 44px auto; padding: 28px; }
+    h1 { line-height: 1.15; }
+    fieldset { border: 1px solid #bcc8c1; border-radius: 8px; padding: 16px; }
+    label { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; align-items: center; }
+    select, button { font: inherit; }
+    select { min-width: 75px; padding: 5px; }
+    button { padding: 9px 16px; margin-top: 16px; background: #245c43; color: white; border: 0; border-radius: 6px; cursor: pointer; }
+    li { padding: 4px 0; }
+    @media (max-width: 440px) { main { margin-top: 10px; padding: 18px; } }
+  </style>
+  <script src="model.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+<main>
+  <h1>Выбор направления обучения</h1>
+  <p>Оцени интерес к четырём видам деятельности. Шкала начинается с 0 — «не интересует» и заканчивается 4 — «очень интересно».</p>
+  <form id="questionnaire">
+    <fieldset id="interests"><legend>Интересы</legend></fieldset>
+    <button type="submit">Сравнить направления</button>
+  </form>
+  <section id="result" aria-live="polite"></section>
+  <p>Учебный пример. Каталог показывает общие профили направлений.</p>
+</main>
+</body>
+</html>
